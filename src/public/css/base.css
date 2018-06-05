@@ -2,9 +2,14 @@ body {
     padding-top: 60px;
 }
 
+.title {
+    display: none;
+}
+
 .login-dropdown-menu {
-    padding: 15px;
-    padding-bottom: 0px;
+    padding: 50px;
+    /* padding-bottom: 0px; */
+    min-width: 400px;
 }
 
 .login-form-field {
