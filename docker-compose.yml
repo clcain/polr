@@ -1,0 +1,27 @@
+version: '2'
+
+volumes:
+  polr:
+  db:
+
+services:
+  polr:
+    build: ./
+    volumes:
+      - polr:/data
+    links:
+      - db:db
+    ports:
+      - 127.0.0.1:80:80/tcp
+    restart: always
+
+  db:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: polr
+      MYSQL_PASSWORD: polr
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: polr
+    volumes:
+      - db:/var/lib/mysql
+    restart: always
