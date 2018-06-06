@@ -16,7 +16,7 @@ services:
     restart: always
 
   db:
-    image: mysql
+    image: mysql:5.7.21
     environment:
       MYSQL_DATABASE: polr
       MYSQL_PASSWORD: polr
